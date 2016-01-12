@@ -1,6 +1,13 @@
-node_modules
-npm-debug.log*
-.DS_Store
+# dependencies
+/node_modules
+/bower_components
 
+# misc
 .idea/*
-bower_components/*
+/.sass-cache
+/connect.lock
+/coverage/*
+/libpeerconnection.log
+npm-debug.log
+testem.log
+.DS_Store
