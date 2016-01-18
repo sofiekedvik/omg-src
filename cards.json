@@ -21,7 +21,7 @@
     "header": "Pipes in React",
     "date": "2016-01-12",
      "images": [
-        "app/images/angular.jpg"
+        "app/images/wordpress.jpg"
     ],
     "link": "https://angular.io/docs/ts/latest/guide/router.html",
     "text": "The browser is a familiar model of application navigation. We enter a URL in the address bar and the browser navigates to a corresponding page. We click links on the page and the browser navigates to a new page. ",
@@ -39,7 +39,7 @@
     "header": "For-loopar",
     "date": "2016-01-01",
      "images": [
-        "app/images/angular.jpg"
+        "app/images/SASS.jpg"
     ],
     "link": "https://angular.io/docs/ts/latest/guide/router.html",
     "text": "The browser is a familiar model of application navigation. We enter a URL in the address bar and the browser navigates to a corresponding page. We click links on the page and the browser navigates to a new page. ",
@@ -54,7 +54,7 @@
   {"card": {
     "header": "Hello world!",
      "images": [
-        "app/images/angular.jpg"
+        "app/images/html5.jpg"
     ],
     "date": "2016-01-05",
     "link": "https://angular.io/docs/ts/latest/guide/router.html",
