@@ -10,7 +10,7 @@ gulp.task('sass', function(){
 
 
 gulp.task('bootstrap-sass', function(){
-  gulp.src(['./bower_components/bootstrap-sass/assets/stylesheets/bootstrap.scss'])
+  gulp.src(['bower_components/bootstrap-sass/assets/stylesheets/bootstrap.scss'])
   .pipe(sass().on('error', sass.logError))
   .pipe(gulp.dest('app/css'));
 });
