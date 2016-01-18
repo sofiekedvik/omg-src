@@ -1,4 +1,4 @@
-///<reference path='./window.extension.d.ts'/>
+
 import {Pipe, PipeTransform} from 'angular2/core';
 
 @Pipe({
