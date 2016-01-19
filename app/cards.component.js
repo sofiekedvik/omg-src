@@ -1,5 +1,4 @@
 System.register(['angular2/core', './fetch-json.pipe'], function(exports_1) {
-    "use strict";
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -26,13 +25,13 @@ System.register(['angular2/core', './fetch-json.pipe'], function(exports_1) {
                 CardsComponent = __decorate([
                     core_1.Component({
                         selector: 'card',
-                        template: "\n      <div class=\"card clearfix\" *ngFor=\"#data of ('cards.json' | fetch) \">\n\n        <div *ngIf=data.card.article>\n          <h2>Articles:</h2>\n          <strong>Category: {{data.card.category}}</strong>\n          <h3>{{data.card.header}}</h3>\n          <p>Date: {{data.card.date}}</p>\n          <p><i>{{data.card.text}}</i></p>\n          <p>Author: {{data.card.author}} </p>\n          <a href=\"{{data.card.link}}\">Read this Article</a>\n        </div>\n\n        <div *ngIf=data.card.tutorial>\n          <h2>Tutorials:</h2>\n          <strong>Category: {{data.card.category}}</strong>\n          <h3>{{data.card.header}}</h3>\n          <p>Date: {{data.card.date}}</p>\n          <p><i>{{data.card.text}}</i></p>\n          <p>Author: {{data.card.author}} </p>\n          <a href=\"{{data.card.link}}\">Read this Article</a>\n        </div>\n\n      </div>\n    ",
+                        template: "\n  <main>\n    <div class=\"banner\">\n      <h1>What is Front End Development?</h1>\n      <p>A front-end developer architects and develops websites and applications using web technologies (i.e. HTML, CSS, and JavaScript) which run natively in a web browser or act as compilation input for non-web browser environments (e.g. PhoneGap or Tidesdk). <a href=\"http://frontenddeveloperjob.com/what-is-a-front-end-developer\">Src: frontenddeveloperjob.com</a></p>\n    </div>\n    <div class=\"container-fluid\">\n      <div class=\"row mark2\">  \n          <div *ngFor=\"#data of ('cards.json' | fetch) \">\n\n            <div class=\"card col-md-3\" *ngIf=data.card.article>\n            <img src=\"{{data.card.images}}\">\n              <h3>{{data.card.header}}</h3>\n              <p class=\"hide\">Date: {{data.card.date}}</p>\n              <p><i>{{data.card.text}}</i></p>\n              <p class=\"hide\">Author: {{data.card.author}} </p>\n              <footer>\n                <h4 class=\"sign\">{{data.card.category[0]}}</h4>\n                <strong class=\"hide\">Category: {{data.card.category}}</strong>\n                <button class=\"read-btn\">Read more</button>  \n              </footer>\n              <a href=\"{{data.card.link}}\" class=\"hide\">Read this Article</a>\n            </div>\n\n            <div class=\"card col-md-3\"*ngIf=data.card.tutorial>\n            <img src=\"{{data.card.images}}\">\n              <h3>{{data.card.header}}</h3>\n              <p class=\"hide\">Date: {{data.card.date}}</p>\n              <p><i>{{data.card.text}}</i></p>\n              <p class=\"hide\">Author: {{data.card.author}} </p>\n              <footer>\n                <h4 class=\"sign\">{{data.card.category[0]}}</h4>\n                <strong class=\"hide\">Category: {{data.card.category}}</strong>\n                <button class=\"read-btn\">Read more</button>  \n              </footer>\n              <a href=\"{{data.card.link}}\" class=\"hide\">Read this Article</a>\n            </div>\n\n          </div>\n         </div>\n     \n    </div>\n  </main>\n    ",
                         pipes: [fetch_json_pipe_1.FetchJsonPipe]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], CardsComponent);
                 return CardsComponent;
-            }());
+            })();
             exports_1("CardsComponent", CardsComponent);
         }
     }
