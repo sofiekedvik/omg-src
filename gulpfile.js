@@ -3,7 +3,7 @@ var gulp = require('gulp'),
 
 
 gulp.task('sass', function(){
-  gulp.src(['app/css/*.scss'])
+  gulp.src(['app/css/**/*.scss'])
   .pipe(sass().on('error', sass.logError))
   .pipe(gulp.dest('app/css'));
 });
@@ -35,4 +35,4 @@ gulp.task('sass:watch', function() {
   gulp.watch('app/css/style.scss', ['sass']);
 });
 
-gulp.task('default', ['sass', 'bootstrap-sass','bootstrap-js','jquery']);
+gulp.task('default', ['sass', 'bootstrap-sass','bootstrap-js','jquery','fonts']);
