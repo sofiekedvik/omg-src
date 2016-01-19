@@ -5,6 +5,7 @@ import {Pipe, PipeTransform} from 'angular2/core';
   name: 'fetch',
   pure: false
 })
+
 export class FetchJsonPipe  implements PipeTransform{
   private fetchedValue:any;
   private fetchPromise:Promise<any>;

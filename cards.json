@@ -8,13 +8,13 @@
     "link": "https://angular.io/docs/ts/latest/guide/router.html",
     "text": "In most applications, users navigate from one view to the next as they perform application tasks.",
     "author": "Angular",
-    "cathegory": [
+    "category": [
         "js",
         "framework",
         "MVC"
     ],
     "article": true,
-    "tutorial" : false 
+    "tutorial" : false
     }
   },
   {"card": {
@@ -26,7 +26,8 @@
     "link": "https://angular.io/docs/ts/latest/guide/router.html",
     "text": "The browser is a familiar model of application navigation. We enter a URL in the address bar and the browser navigates to a corresponding page. We click links on the page and the browser navigates to a new page. ",
     "author": "React",
-    "cathegory": [
+
+    "category": [
         "JavaScript",
         "Framework",
         "MVC"
@@ -44,7 +45,7 @@
     "link": "https://angular.io/docs/ts/latest/guide/router.html",
     "text": "The browser is a familiar model of application navigation. We enter a URL in the address bar and the browser navigates to a corresponding page. We click links on the page and the browser navigates to a new page. ",
     "author": "Bambi",
-    "cathegory": [
+    "category": [
        "HTML"
     ],
     "article": false,
@@ -60,7 +61,7 @@
     "link": "https://angular.io/docs/ts/latest/guide/router.html",
     "text": "The browser is a familiar model of application navigation. We enter a URL in the address bar and the browser navigates to a corresponding page. We click links on the page and the browser navigates to a new page. ",
     "author": "Microsoft",
-    "cathegory": [
+    "category": [
        "HTML"
     ],
     "article": false,

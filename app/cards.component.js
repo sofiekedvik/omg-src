@@ -1,4 +1,5 @@
 System.register(['angular2/core', './fetch-json.pipe'], function(exports_1) {
+    "use strict";
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -25,13 +26,13 @@ System.register(['angular2/core', './fetch-json.pipe'], function(exports_1) {
                 CardsComponent = __decorate([
                     core_1.Component({
                         selector: 'card',
-                        template: "\n    <h4>Data from JSON file</h4>\n\n      <div class=\"card clearfix\" *ngFor=\"#data of ('cards.json' | fetch) \">\n        <strong>Category: {{data.card.cat}}</strong>\n        <h3>{{data.card.header}}</h3>\n        <p>Date: {{data.card.date}}</p>\n        <p><i>{{data.card.text}}</i></p>\n        <p>Author: {{data.card.author}} </p>\n        <a href=\"{{data.card.link}}\">Read this Article</a>\n      </div>\n\n    ",
+                        template: "\n      <div class=\"card clearfix\" *ngFor=\"#data of ('cards.json' | fetch) \">\n\n        <div *ngIf=data.card.article>\n          <h2>Articles:</h2>\n          <strong>Category: {{data.card.category}}</strong>\n          <h3>{{data.card.header}}</h3>\n          <p>Date: {{data.card.date}}</p>\n          <p><i>{{data.card.text}}</i></p>\n          <p>Author: {{data.card.author}} </p>\n          <a href=\"{{data.card.link}}\">Read this Article</a>\n        </div>\n\n        <div *ngIf=data.card.tutorial>\n          <h2>Tutorials:</h2>\n          <strong>Category: {{data.card.category}}</strong>\n          <h3>{{data.card.header}}</h3>\n          <p>Date: {{data.card.date}}</p>\n          <p><i>{{data.card.text}}</i></p>\n          <p>Author: {{data.card.author}} </p>\n          <a href=\"{{data.card.link}}\">Read this Article</a>\n        </div>\n\n      </div>\n    ",
                         pipes: [fetch_json_pipe_1.FetchJsonPipe]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], CardsComponent);
                 return CardsComponent;
-            })();
+            }());
             exports_1("CardsComponent", CardsComponent);
         }
     }
