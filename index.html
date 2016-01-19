@@ -4,19 +4,23 @@
    <base href="/">
 
     <title>Omg src</title>
-
-    <!-- 1. Load libraries -->
+    <!-- 1. style -->
+    <link rel="stylesheet" href="app/css/bootstrap.css" media="screen">
+    <link rel="stylesheet" href="app/css/style.css" media="screen">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 2. Load libraries -->
     <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
     <script src="node_modules/systemjs/dist/system.src.js"></script>
     <script src="node_modules/rxjs/bundles/Rx.js"></script>
     <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
     <script src="node_modules/angular2/bundles/router.dev.js"></script>
-    <link rel="stylesheet" href="app/css/bootstrap.css" media="screen">
-    <link rel="stylesheet" href="app/css/style.css" media="screen">
     <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+    <script src="app/js/jquery.min.js"></script>
+    <script src="app/js/bootstrap.min.js"></script>
 
 
-    <!-- 2. Configure SystemJS -->
+
+    <!-- 3. Configure SystemJS -->
     <script>
       System.config({
         packages: {
