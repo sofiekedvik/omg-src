@@ -15,8 +15,24 @@ gulp.task('bootstrap-sass', function(){
   .pipe(gulp.dest('app/css'));
 });
 
+gulp.task('bootstrap-js', function(){
+  gulp.src(['bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js'])
+  .pipe(gulp.dest('app/js'));
+});
+
+gulp.task('jquery', function(){
+  gulp.src(['bower_components/jquery/dist/jquery.min.js'])
+  .pipe(gulp.dest('app/js'));
+});
+
+gulp.task('fonts', function(){
+  gulp.src(['bower_components/bootstrap-sass/assets/fonts/**'])
+  .pipe(gulp.dest('app/fonts'));
+});
+
+
 gulp.task('sass:watch', function() {
   gulp.watch('app/css/*.scss', ['sass']);
 });
 
-gulp.task('default', ['sass', 'bootstrap-sass']);
+gulp.task('default', ['sass', 'bootstrap-sass','bootstrap-js','jquery']);
