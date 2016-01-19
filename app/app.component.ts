@@ -1,6 +1,7 @@
 import {Component} from 'angular2/core';
 import {CardsComponent} from './cards.component';
 import {MenuComponent} from './menu.component';
+import {FilterCatComponent} from './filter-cat/filter-cat.component';
 import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 import {Login} from './login/login.component';
 
@@ -10,7 +11,8 @@ import {Login} from './login/login.component';
     directives: [
       ROUTER_DIRECTIVES,
       CardsComponent,
-      MenuComponent
+      MenuComponent,
+      FilterCatComponent
     ]
 })
 

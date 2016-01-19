@@ -18,7 +18,7 @@ import {CardsComponent} from './cards.component';
             </label>
         <nav class="menu main">
           <ul>
-            <li><h3>Cathegory</h3></li>
+            <li><h3>Category</h3></li>
             <li (click)="setCat(1)"><a href="#">CSS</a></li>
             <li (click)="setCat(2)"><a href="#">HTML</a></li>
             <li (click)="setCat(3)"><a href="#">JavaScript</a></li>
