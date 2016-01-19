@@ -4,6 +4,7 @@ import {MenuComponent} from './menu.component';
 import {FilterCatComponent} from './filter-cat/filter-cat.component';
 import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 import {Login} from './login/login.component';
+import {FetchJsonPipe} from './fetch-json.pipe';
 
 @Component({
     selector: 'app',
@@ -13,11 +14,16 @@ import {Login} from './login/login.component';
       CardsComponent,
       MenuComponent,
       FilterCatComponent
-    ]
+    ],
+    pipes: [FetchJsonPipe]
 })
 
 @RouteConfig([
   {path:'/login', name: 'Login', component: Login},
 ])
 
-export class AppComponent { }
+export class AppComponent {
+  public data = {
+    cat: 1
+  }
+ }

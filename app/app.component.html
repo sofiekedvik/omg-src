@@ -1,10 +1,15 @@
-<header>Loading menu...</header>
+<header [data]="data">Loading menu...</header>
 
 <nav>
   <a [routerLink]="['Login']">Login</a>
 </nav>
 <router-outlet></router-outlet>
 
-<card>Loading cards...</card>
+<div class="card clearfix" *ngFor="#data of ('cards.json' | fetch) ">
+    <card [data]="data">Loading cards...</card>
+</div>
+
 <hr>
-<filter-cat>Loading filtering...</filter-cat>
+<div *ngFor="#data of ('cards.json' | fetch) ">
+    <filter-cat [data]="data">Filtering...</filter-cat>
+</div>
