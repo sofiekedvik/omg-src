@@ -30,7 +30,6 @@ gulp.task('fonts', function(){
   .pipe(gulp.dest('app/fonts'));
 });
 
-
 gulp.task('sass:watch', function() {
   gulp.watch('app/css/style.scss', ['sass']);
 });
