@@ -39,6 +39,14 @@ header {
   font-family: 'Dosis', sans-serif;
 }
 
+.hide {
+  display: none;
+}
+
+.show {
+  display: inline;
+}
+
 .menu-holder {
   display:inline;
   cursor: pointer;
@@ -136,10 +144,15 @@ ul {
 
 .col-md-6, .col-md-3 {
   overflow:hidden;
+  height: 300px;
 }
 
 .img-1 {
   width:100%;
+}
+
+.card {
+  
 }
 
 
