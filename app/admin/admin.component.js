@@ -1,4 +1,3 @@
-///<reference path='../firebase.d.ts'/>
 System.register(['angular2/core'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -10,33 +9,27 @@ System.register(['angular2/core'], function(exports_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var template, Login, firebase;
+    var AdminLogin;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            template = "\n  <login>\n  <h2>Sign in</h2>\n  <input id=\"username\" #username name=\"username\" [(ngModel)]='user.name' type=\"text\">\n  <input id=\"password\" #password name=\"password\" [(ngModel)]='user.password' type=\"text\">\n  <button (click)=\"logInputData(username.value)\">Add Todo</button>\n  </login>\n";
-            Login = (function () {
-                function Login(firebase, username, password, text) {
-                    this.firebase = firebase;
-                    this.username = username;
-                    this.password = password;
-                    this.text = text;
+            AdminLogin = (function () {
+                function AdminLogin() {
                 }
-                Login = __decorate([
+                AdminLogin = __decorate([
                     core_1.Component({
-                        selector: 'login',
-                        template: template
+                        selector: 'adminLogin',
+                        template: "\n  "
                     }), 
-                    __metadata('design:paramtypes', [String, String, String, String])
-                ], Login);
-                return Login;
+                    __metadata('design:paramtypes', [])
+                ], AdminLogin);
+                return AdminLogin;
             })();
-            exports_1("Login", Login);
-            firebase = new Firebase("https://omgsrc.firebaseio.com");
+            exports_1("AdminLogin", AdminLogin);
         }
     }
 });
-//# sourceMappingURL=login.component.js.map
+//# sourceMappingURL=admin.component.js.map
