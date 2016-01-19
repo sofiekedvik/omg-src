@@ -32,7 +32,7 @@ gulp.task('fonts', function(){
 
 
 gulp.task('sass:watch', function() {
-  gulp.watch('app/css/*.scss', ['sass']);
+  gulp.watch('app/css/style.scss', ['sass']);
 });
 
 gulp.task('default', ['sass', 'bootstrap-sass','bootstrap-js','jquery']);
