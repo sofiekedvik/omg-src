@@ -1,11 +1,11 @@
 import {Component} from 'angular2/core';
-import {FetchJsonPipe} from './fetch-json.pipe';
-import {CardsComponent} from './cards.component';
+import {FetchJsonPipe} from '../pipes/fetch-json.pipe';
+import {CardsComponent} from '../cards/cards.component';
 
 
 @Component({
   selector: 'header',
-  // styleUrls: ['app/stylesheets/style.css'],
+  // styleUrls: ['app/css/style.css'],
   template: `
     <div class="row">
       <div class="col-md-4">

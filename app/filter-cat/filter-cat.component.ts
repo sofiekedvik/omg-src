@@ -1,6 +1,6 @@
 import {Component} from 'angular2/core';
-import {CardsComponent} from '../cards.component';
-import {MenuComponent} from '../menu.component';
+import {CardsComponent} from '../cards/cards.component';
+import {MenuComponent} from '../menu/menu.component';
 
 
 @Component({

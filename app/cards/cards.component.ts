@@ -1,5 +1,5 @@
 import {Component} from 'angular2/core';
-import {ShortText} from './pipes/shortText.pipe';
+import {ShortText} from '../pipes/shortText.pipe';
 
 @Component({
   selector: 'card',
