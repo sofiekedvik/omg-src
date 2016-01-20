@@ -1,4 +1,4 @@
-<div class="admin">
+<div class="admin show">
 <h1>Create Card</h1>
   <div class="admin-wrapper">
     <form (submit)="createCard()" class="">
@@ -15,18 +15,23 @@
         <input [(ngModel)]='card.author' type="text" class="form-control" placeholder="author" title="author" />
       </fieldset>
       <fieldset class="form-group">
-      <label>1</label>
-        <select [(ngModel)]='card.category' class="form-control" title="Stars">
-        <option selected value=""></option>
-          <option value="html">html</option>
-          <option value="php">php</option>
-        </select>
-        <label>2</label>
-          <select [(ngModel)]='card.category' class="form-control" title="Stars">
-            <option selected value=""></option>
-            <option value="html">html</option>
-            <option value="php">php</option>
-          </select>
+        <div class="input-group">
+          <div class="input-group-addon">1</div>
+            <select [(ngModel)]='card.category' class="form-control" title="Stars">
+              <option selected value=""></option>
+              <option value="html">html</option>
+              <option value="php">php</option>
+            </select>
+        </div>
+        <!-- <label>2</label> -->
+        <div class="input-group">
+          <div class="input-group-addon">1</div>
+            <select [(ngModel)]='card.category' class="form-control" title="Stars">
+              <option selected value=""></option>
+              <option value="html">html</option>
+              <option value="php">php</option>
+            </select>
+        </div>
       </fieldset>
       <fieldset class="form-group">
       <div class="checkbox">

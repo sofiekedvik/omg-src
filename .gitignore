@@ -14,3 +14,5 @@ testem.log
 
 *.map
 .map
+
+*.map

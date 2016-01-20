@@ -1,4 +1,4 @@
-System.register(['angular2/core', './cards.component', './menu.component', 'angular2/router', './login/login.component'], function(exports_1) {
+System.register(['angular2/core', './cards.component', './menu.component', 'angular2/router', './login/login.component', './admin/admin.component'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,7 +8,7 @@ System.register(['angular2/core', './cards.component', './menu.component', 'angu
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, cards_component_1, menu_component_1, router_1, login_component_1;
+    var core_1, cards_component_1, menu_component_1, router_1, login_component_1, admin_component_1;
     var AppComponent;
     return {
         setters:[
@@ -26,6 +26,9 @@ System.register(['angular2/core', './cards.component', './menu.component', 'angu
             },
             function (login_component_1_1) {
                 login_component_1 = login_component_1_1;
+            },
+            function (admin_component_1_1) {
+                admin_component_1 = admin_component_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
@@ -37,12 +40,14 @@ System.register(['angular2/core', './cards.component', './menu.component', 'angu
                         templateUrl: 'app/app.component.html',
                         directives: [
                             router_1.ROUTER_DIRECTIVES,
+                            admin_component_1.Admin,
                             cards_component_1.CardsComponent,
                             menu_component_1.MenuComponent
                         ]
                     }),
                     router_1.RouteConfig([
                         { path: '/login', name: 'Login', component: login_component_1.Login },
+                        { path: '/admin', name: 'Admin', component: admin_component_1.Admin }
                     ]), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);

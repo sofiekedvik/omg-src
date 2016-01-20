@@ -32,7 +32,7 @@ export class Login {
     public text: string
   ){ }
 
-  var firebase = new Firebase("https://omgsrc.firebaseio.com");
+  // var firebase = new Firebase("https://omgsrc.firebaseio.com");
 
   // function logInputData(username, password){
   //   console.log(username);
