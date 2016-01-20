@@ -13,3 +13,4 @@ testem.log
 *.js.map
 
 *.map
+.map
