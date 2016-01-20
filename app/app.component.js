@@ -1,4 +1,4 @@
-System.register(['angular2/core', './cards.component', './menu.component', './filter-cat/filter-cat.component', 'angular2/router', './login/login.component', './admin/admin.component', './fetch-json.pipe'], function(exports_1) {
+System.register(['angular2/core', './cards/cards.component', './menu/menu.component', './filter-cat/filter-cat.component', 'angular2/router', './login/login.component', './admin/admin.component', './pipes/fetch-json.pipe'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
