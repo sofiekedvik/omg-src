@@ -5,9 +5,27 @@
 </nav>
 <router-outlet></router-outlet>
 
-<div class="card clearfix" *ngFor="#data of ('cards.json' | fetch) ">
-    <card [data]="data">Loading cards...</card>
-</div>
+<main>
+  <div class="banner">
+    <h1>What is Front End Development?</h1>
+    <p>A front-end developer architects and develops websites and applications using web technologies (i.e. HTML, CSS, and JavaScript) which run natively in a web browser or act as compilation input for non-web browser environments (e.g. PhoneGap or Tidesdk). <a href="http://frontenddeveloperjob.com/what-is-a-front-end-developer">Src: frontenddeveloperjob.com</a></p>
+  </div>
+  <div class="container-fluid">
+    <div class="row mark2">
+
+      <div *ngFor="#data of ('cards.json' | fetch) ">
+          <card [data]="data">Loading cards...</card>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+
+
+
+
+
 
 <hr>
 <div *ngFor="#data of ('cards.json' | fetch) ">

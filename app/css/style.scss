@@ -156,9 +156,11 @@ ul {
   height: 300px;
 
   footer {
-    position: relative;
+    position: absolute;
     bottom: 0;
     left:0;
+    right: 0;
+    padding: 0px 20px;
   }
 }
 
@@ -166,18 +168,13 @@ img {
   width:100%;
 }
 
-.card {
-  
-}
-
-
 .read-btn {
   padding: 8px;
   background: none;
   border: 2px solid grey;
   color: grey;
   text-align: center;
-  float: right;
+  float:right;
 }
 
 div[class*=' number'],div[class^='number'] {
@@ -199,7 +196,7 @@ div[class*=' number'],div[class^='number'] {
   padding:10px 10px;
   color: white;
   border-radius: 0px 20px 20px 0px;
-  float: left;
+  float:left;
 }
 
 .JavaScript {
@@ -232,4 +229,4 @@ div[class*=' number'],div[class^='number'] {
 .blur {
   filter: blur(20px);
 }
-@import 'components/admin';
+/*@import 'components/admin';*/
