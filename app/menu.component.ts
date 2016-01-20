@@ -2,6 +2,7 @@ import {Component} from 'angular2/core';
 import {FetchJsonPipe} from './fetch-json.pipe';
 import {CardsComponent} from './cards.component';
 
+
 @Component({
   selector: 'header',
   styleUrls: ['app/css/style.css'],
@@ -18,9 +19,9 @@ import {CardsComponent} from './cards.component';
             </label>
         <nav class="menu main">
           <ul>
-            <li><h3>Cathegory</h3></li>
-            <li (click)="setCat(1)"><a href="#">CSS</a></li>
-            <li (click)="setCat(2)"><a href="#">HTML</a></li>
+            <li><h3>Category</h3></li>
+            <li (click)="setCat(1)"><a>CSS</a></li>
+            <li (click)="setCat(2)"><a>HTML</a></li>
             <li (click)="setCat(3)"><a href="#">JavaScript</a></li>
             <li (click)="setCat(4)"><a href="#">PHP</a></li>
             <li (click)="setCat(5)"><a href="#">Design</a></li>
