@@ -3,6 +3,7 @@
   <div class="admin-wrapper">
     <form (submit)="createCard()" class="">
       <fieldset class="form-group">
+        <h2>{{card.header}}</h2>
         <input [(ngModel)]='card.header' type="text" class="form-control" placeholder="header" title="header" />
       </fieldset>
       <fieldset class="form-group">
@@ -14,26 +15,30 @@
       <fieldset class="form-group">
         <input [(ngModel)]='card.author' type="text" class="form-control" placeholder="author" title="author" />
       </fieldset>
-      <fieldset class="form-group">
+      
+      <!-- <fieldset class="form-group">
         <div class="input-group">
-          <div class="input-group-addon">1</div>
+          <div class="input-group-addon">category</div>
             <select [(ngModel)]='card.category' class="form-control" title="Stars">
               <option selected value=""></option>
               <option value="html">html</option>
               <option value="php">php</option>
             </select>
         </div>
+
         <!-- <label>2</label> -->
-        <div class="input-group">
-          <div class="input-group-addon">1</div>
-            <select [(ngModel)]='card.category' class="form-control" title="Stars">
+
+        <!-- <div class="input-group">
+          <div class="input-group-addon">tags</div>
+            <select [(ngModel)]='card.tags' class="form-control" title="Stars">
               <option selected value=""></option>
               <option value="html">html</option>
               <option value="php">php</option>
             </select>
         </div>
-      </fieldset>
-      <fieldset class="form-group">
+      </fieldset> -->
+
+      <!-- <fieldset class="form-group">
       <div class="checkbox">
         <h3>{{card.type.tutorial}}</h3>
         <label>tutorial:
@@ -47,7 +52,7 @@
         <input type="checkbox" [(ngModel)]="card.type.article">
         </label><br/>
       </div>
-      </fieldset>
+      </fieldset> -->
       <fieldset class="form-group">
       <input type="submit" class="btn btn-primary btn-lg btn-block" value="Creat card" />
       </fieldset>
