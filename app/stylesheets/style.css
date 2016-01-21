@@ -15,10 +15,10 @@ header {
   top: 0;
   left: 0;
   background: #E0E0E0;
-  z-index: 100;
-  padding: 10px; }
+  z-index: 100; }
 
 .logo {
+  margin-top: -10px;
   text-align: center;
   font-family: 'Permanent Marker', cursive; }
 
@@ -42,11 +42,13 @@ header {
   display: inline;
   cursor: pointer;
   position: absolute;
-  top: 10px;
-  left: 20px; }
+  top: 0px;
+  left: 0px;
+  padding: 25px;
+  z-index: 1000; }
 
 .banner {
-  padding: 100px 200px;
+  padding: 8% 10%;
   background: white;
   height: 300px; }
 
@@ -54,10 +56,19 @@ header {
   font-size: 25px; }
 
 .search {
-  background: none;
-  margin-top: 8px;
-  float: right;
-  border: none; }
+  padding: 25px; }
+  .search #search-btn {
+    background: none;
+    float: right;
+    border: none; }
+  .search #search-btn:focus {
+    outline: none; }
+  .search input[type=text]:focus {
+    outline: none; }
+  .search input[type=text] {
+    float: right;
+    height: 30px;
+    padding-left: 10px; }
 
 input[type=checkbox] {
   position: absolute;
@@ -67,7 +78,7 @@ input[type=checkbox] {
 ul {
   background: #C8C8C8;
   width: 150px;
-  padding: 20px 15px;
+  padding: 60px 20px;
   height: 100vh;
   list-style-type: none;
   z-index: 100; }
@@ -79,7 +90,7 @@ ul {
 .menu {
   position: absolute;
   left: -300px;
-  top: 68px;
+  top: 0px;
   z-index: 10;
   width: 0px;
   -moz-transition: all 500ms ease;
@@ -122,10 +133,11 @@ ul {
   z-index: 100;
   position: fixed; }
 
-.col-md-6, .col-md-3 {
+.card {
   overflow: hidden;
-  height: 300px; }
-  .col-md-6 footer, .col-md-3 footer {
+  height: 250px;
+  margin-top: 30px; }
+  .card footer {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -150,7 +162,13 @@ div[class*=' number'], div[class^='number'] {
 
 .mark2 {
   border-bottom: 2px solid #ccc;
-  padding: 50px 0px; }
+  border-top: 2px solid #ccc;
+  padding: 10px 0px 40px; }
+  .mark2 .articles {
+    color: #FF5751;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px; }
 
 .category {
   width: 130px;
@@ -180,9 +198,6 @@ div[class*=' number'], div[class^='number'] {
   color: grey;
   font-size: 22px;
   font-weight: 300; }
-
-.blur {
-  filter: blur(20px); }
 
 .admin {
   position: fixed;

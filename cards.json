@@ -67,4 +67,24 @@
     "article": false,
     "tutorial": true
   }
-}]
+},
+  {
+  "card": {
+    "header": "SCSS in SASS",
+    "date": "2016-01-13",
+    "images": [
+      "app/images/SASS.jpg"
+    ],
+    "link": "https://angular.io/docs/ts/latest/guide/router.html",
+    "text": "In most applications, users navigate from one view to the next as they perform application tasks.",
+    "author": "Angular",
+    "category": [
+      "CSS",
+      "Framework"
+    ],
+    "article": true,
+    "tutorial": false
+  }
+}
+
+]
