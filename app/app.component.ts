@@ -42,7 +42,7 @@ export class AppComponent {
     cat: 1
   }
  }
- bootstrap(AppComponent,  [
-     ROUTER_PROVIDERS,
-     provide(LocationStrategy, {useClass: HashLocationStrategy})
- ]);
+ // bootstrap(AppComponent,  [
+ //     ROUTER_PROVIDERS,
+ //     provide(LocationStrategy, {useClass: HashLocationStrategy})
+ // ]);
