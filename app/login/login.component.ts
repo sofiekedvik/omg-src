@@ -1,27 +1,13 @@
 ///<reference path='../firebase.d.ts'/>
-
+import {RouterLink} from 'angular2/router';
 import {Component,View} from 'angular2/core';
 import {NgForm} from 'angular2/common';
 
-
-
-var template = `
-  <login>
-  <h2>Sign in</h2>
-  <input id="username" #username name="username" [(ngModel)]='user.name' type="text">
-  <input id="password" #password name="password" [(ngModel)]='user.password' type="text">
-  <button (click)="logInputData(username.value)">Add Todo</button>
-  </login>
-`;
-
 @Component({
   selector: 'login',
-  template: template
+  templateUrl: './app/templates/login.html',
+  directives: [RouterLink]
 })
-
-// @View({
-//   template: template
-// })
 
 export class Login {
 
