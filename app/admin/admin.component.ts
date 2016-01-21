@@ -1,10 +1,12 @@
 import {Component, OnInit} from 'angular2/core';
 import {FirebaseService} from '../firebase/firebase.service';
+import {RouterLink} from 'angular2/router';
 
 
 @Component({
   selector: 'admin',
   templateUrl: './app/templates/admin.html',
+  directives: [RouterLink],
   providers: [FirebaseService]
 })
 
