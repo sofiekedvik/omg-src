@@ -37,8 +37,9 @@ import {CardsComponent} from '../cards/cards.component';
         <h1><a href="index.html">Omg=<span>Src!</span></a></h1>
         <p>The modern front end wiki</p>
       </div>
-      <div class="col-md-4">
-        <button class="search"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+      <div class="search col-md-4">
+        <button id="search-btn" (click)="toggleInput()"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+        <input id="searchField" class="hide" type="text" placeholder="Search...">
       </div>
 
     </div>
@@ -54,4 +55,10 @@ export class MenuComponent {
     this.cat = catId;
     console.log(this.cat);
   }
+
+  toggleInput(){
+    document.getElementById("searchField").classList.toggle('hide');
+        }
+
+
 }

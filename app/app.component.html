@@ -12,18 +12,15 @@
   </div>
   <div class="container-fluid">
     <div class="row mark2">
-
+      <h2 class="articles">Articles</h2>
       <div *ngFor="#data of ('cards.json' | fetch) ">
           <card [data]="data">Loading cards...</card>
       </div>
+      
 
     </div>
   </div>
 </main>
-
-
-
-
 
 
 
