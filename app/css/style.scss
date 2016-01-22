@@ -45,6 +45,10 @@ header {
   display: none;
 }
 
+.hidden {
+	visibility: hidden;
+}
+
 .show {
   display: inline;
 }
@@ -201,7 +205,7 @@ div[class*=' number'],div[class^='number'] {
 
 .JavaScript {
   background:#EFB349;
-  
+
 }
 
 .PHP {

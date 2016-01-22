@@ -22,12 +22,12 @@ import {CardsComponent} from './cards.component';
             <li><h3>Category</h3></li>
             <li (click)="setCat(1)"><a>CSS</a></li>
             <li (click)="setCat(2)"><a>HTML</a></li>
-            <li (click)="setCat(3)"><a href="#">JavaScript</a></li>
-            <li (click)="setCat(4)"><a href="#">PHP</a></li>
-            <li (click)="setCat(5)"><a href="#">Design</a></li>
+            <li (click)="setCat(3)"><a>JavaScript</a></li>
+            <li (click)="setCat(4)"><a>PHP</a></li>
+            <li (click)="setCat(5)"><a>Design</a></li>
 
             <li><h3>Omg Src</h3></li>
-            <li><a href="#">About</a></li>
+            <li id="about-link" (click)="about()"><a href="#about-page">About</a></li>
             <li><a href="#">What is Frontend?</a></li>
             <li><a href="#">FaQ</a></li>
           </ul>
@@ -54,4 +54,23 @@ export class MenuComponent {
     this.cat = catId;
     console.log(this.cat);
   }
+
+  about(){
+    console.log("click");
+
+    //show and hide about
+    if($("#about-page").hasClass("hidden")){
+      $('html, body').animate({
+        scrollTop: $("#about-page").offset().top
+      }, 2000);
+
+      $("#about-page").removeClass("hidden");
+      $("#about-page").addClass("show");
+    }
+    else if($("#about-page").hasClass("show")) {
+      $("#about-page").removeClass("show");
+      $("#about-page").addClass("hidden");
+    }
+  }
+
 }

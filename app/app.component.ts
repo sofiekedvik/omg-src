@@ -1,7 +1,7 @@
 import {Component} from 'angular2/core';
 import {CardsComponent} from './cards.component';
 import {MenuComponent} from './menu.component';
-import {FilterCatComponent} from './filter-cat/filter-cat.component';
+import {AboutPageComponent} from './about_page/aboutPage.component';
 import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 import {Login} from './login/login.component';
 import {FetchJsonPipe} from './fetch-json.pipe';
@@ -13,7 +13,8 @@ import {FetchJsonPipe} from './fetch-json.pipe';
       ROUTER_DIRECTIVES,
       CardsComponent,
       MenuComponent,
-      FilterCatComponent
+      FilterCatComponent,
+      AboutPageComponent
     ],
     pipes: [FetchJsonPipe]
 })
@@ -24,6 +25,7 @@ import {FetchJsonPipe} from './fetch-json.pipe';
 
 export class AppComponent {
   public data = {
-    cat: 1
+    cat: 1,
+    page: 1
   }
  }

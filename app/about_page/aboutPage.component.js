@@ -1,4 +1,4 @@
-System.register(['angular2/core', '../cards.component', '../menu.component'], function(exports_1) {
+System.register(['angular2/core'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,36 +8,31 @@ System.register(['angular2/core', '../cards.component', '../menu.component'], fu
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, cards_component_1, menu_component_1;
-    var FilterCatComponent;
+    var core_1;
+    var AboutPageComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (cards_component_1_1) {
-                cards_component_1 = cards_component_1_1;
-            },
-            function (menu_component_1_1) {
-                menu_component_1 = menu_component_1_1;
             }],
         execute: function() {
-            FilterCatComponent = (function () {
-                function FilterCatComponent() {
+            AboutPageComponent = (function () {
+                function AboutPageComponent() {
                 }
-                FilterCatComponent = __decorate([
+                AboutPageComponent.prototype.about = function () {
+                };
+                AboutPageComponent = __decorate([
                     core_1.Component({
-                        selector: 'filter-cat',
-                        template: "\n    <div *ngIf=\"data.cat == 1\">\n      <h1>Hej</h1>\n        {{data.card[0]}}\n    </div>\n    ",
-                        inputs: ['data'],
-                        directives: [menu_component_1.MenuComponent, cards_component_1.CardsComponent]
+                        selector: 'about-page',
+                        template: "\n    <div id=\"about-page\" class=\"hidden\">\n      <h2 (click)=\"about()\">About Omg Src Lorem Ipsum Dolor</h2>\n    </div>\n  "
                     }), 
                     __metadata('design:paramtypes', [])
-                ], FilterCatComponent);
-                return FilterCatComponent;
+                ], AboutPageComponent);
+                return AboutPageComponent;
             })();
-            exports_1("FilterCatComponent", FilterCatComponent);
+            exports_1("AboutPageComponent", AboutPageComponent);
         }
     }
 });
-//# sourceMappingURL=filter-cat.component.js.map
+//AboutPageComponent.about();
+//# sourceMappingURL=aboutPage.component.js.map
