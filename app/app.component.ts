@@ -1,24 +1,33 @@
 import {Component} from 'angular2/core';
+import {AboutPageComponent} from './about_page/aboutPage.component';
+import {CardsComponent} from './cards/cards.component';
+import {MenuComponent} from './menu/menu.component';
+import {FilterCatComponent} from './filter-cat/filter-cat.component';
 import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
-
 import {Login} from './login/login.component';
+import {Admin} from './admin/admin.component';
+import {FetchJsonPipe} from './pipes/fetch-json.pipe';
 
-var template = `
-<h1>Angular app</h1>
-  <nav>
-    <a [routerLink]="['Login']">Login</a>
-  </nav>
-<router-outlet></router-outlet>
-`;
 
 @Component({
     selector: 'app',
-    template:  template,
-    directives: [ROUTER_DIRECTIVES]
+    templateUrl: 'app/app.component.html',
+    directives: [
+      ROUTER_DIRECTIVES,
+      Admin,
+      CardsComponent,
+      MenuComponent,
+      FilterCatComponent,
+      AboutPageComponent
+    ],
+    pipes: [FetchJsonPipe]
 })
 
 @RouteConfig([
   {path:'/login', name: 'Login', component: Login},
+  {path:'/admin', name: 'Admin', component: Admin},
 ])
 
-export class AppComponent { }
+export class AppComponent {
+
+ }

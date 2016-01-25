@@ -1,6 +1,5 @@
 # dependencies
 /node_modules
-/bower_components
 
 # misc
 .idea/*
@@ -11,3 +10,6 @@
 npm-debug.log
 testem.log
 .DS_Store
+*.js.map
+*.map
+.map

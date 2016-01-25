@@ -1,0 +1,61 @@
+<div class="admin show">
+<h1>Create Card</h1>
+  <div class="admin-wrapper">
+    <form (submit)="createCard()" class="">
+      <fieldset class="form-group">
+        <h2>{{card.header}}</h2>
+        <input [(ngModel)]='card.header' type="text" class="form-control" placeholder="header" title="header" />
+      </fieldset>
+      <fieldset class="form-group">
+        <input [(ngModel)]='card.link' type="text" class="form-control" placeholder="link" title="link" />
+      </fieldset>
+      <fieldset class="form-group">
+        <input [(ngModel)]='card.text' type="text" class="form-control" placeholder="text" title="text" />
+      </fieldset>
+      <fieldset class="form-group">
+        <input [(ngModel)]='card.author' type="text" class="form-control" placeholder="author" title="author" />
+      </fieldset>
+
+      <!-- <fieldset class="form-group">
+        <div class="input-group">
+          <div class="input-group-addon">category</div>
+            <select [(ngModel)]='card.category' class="form-control" title="Stars">
+              <option selected value=""></option>
+              <option value="html">html</option>
+              <option value="php">php</option>
+            </select>
+        </div>
+
+        <!-- <label>2</label> -->
+
+        <!-- <div class="input-group">
+          <div class="input-group-addon">tags</div>
+            <select [(ngModel)]='card.tags' class="form-control" title="Stars">
+              <option selected value=""></option>
+              <option value="html">html</option>
+              <option value="php">php</option>
+            </select>
+        </div>
+      </fieldset> -->
+
+      <!-- <fieldset class="form-group">
+      <div class="checkbox">
+        <h3>{{card.type.tutorial}}</h3>
+        <label>tutorial:
+          <input type="checkbox" class="admin-checkbox" [(ngModel)]="card.type.tutorial">
+        </label>
+<br/>
+      </div>
+      <div class="checkbox">
+        <h3>{{card.type.article}}</h3>
+        <label>article:
+        <input type="checkbox" [(ngModel)]="card.type.article">
+        </label><br/>
+      </div>
+      </fieldset> -->
+      <fieldset class="form-group">
+      <input type="submit" class="btn btn-primary btn-lg btn-block" value="Create card" />
+      </fieldset>
+    </form>
+  </div>
+</div>

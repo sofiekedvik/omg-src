@@ -1,3 +1,4 @@
+///<reference path='../firebase.d.ts'/>
 System.register(['angular2/core'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -16,15 +17,20 @@ System.register(['angular2/core'], function(exports_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            template = "\n  <h2>Sign in</h2>\n  <input id=\"username\"type=\"text\" name=\"name\" value=\"\">\n  <input id=\"password\" type=\"text\" name=\"name\" value=\"\">\n  <button id=\"login\" type=\"submit\" name=\"button\">Login</button>\n";
+            template = "\n  <login>\n  <h2>Sign in</h2>\n  <input id=\"username\" #username name=\"username\" [(ngModel)]='user.name' type=\"text\">\n  <input id=\"password\" #password name=\"password\" [(ngModel)]='user.password' type=\"text\">\n  <button (click)=\"logInputData(username.value)\">Add Todo</button>\n  </login>\n";
             Login = (function () {
-                function Login() {
+                function Login(firebase, username, password, text) {
+                    this.firebase = firebase;
+                    this.username = username;
+                    this.password = password;
+                    this.text = text;
                 }
                 Login = __decorate([
                     core_1.Component({
+                        selector: 'login',
                         template: template
                     }), 
-                    __metadata('design:paramtypes', [])
+                    __metadata('design:paramtypes', [String, String, String, String])
                 ], Login);
                 return Login;
             })();
