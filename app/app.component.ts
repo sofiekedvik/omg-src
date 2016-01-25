@@ -27,7 +27,5 @@ import {FetchJsonPipe} from './pipes/fetch-json.pipe';
 ])
 
 export class AppComponent {
-  public data = {
-    cat: 1
-  }
+
  }

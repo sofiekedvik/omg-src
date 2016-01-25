@@ -1,4 +1,4 @@
-System.register(['angular2/core', '../firebase/firebase.service', '../pipes/shortText.pipe'], function(exports_1) {
+System.register(['angular2/core', '../firebase/firebase.service'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,8 +8,8 @@ System.register(['angular2/core', '../firebase/firebase.service', '../pipes/shor
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, firebase_service_1, shortText_pipe_1;
-    var CardsComponent;
+    var core_1, firebase_service_1;
+    var Admin;
     return {
         setters:[
             function (core_1_1) {
@@ -17,43 +17,48 @@ System.register(['angular2/core', '../firebase/firebase.service', '../pipes/shor
             },
             function (firebase_service_1_1) {
                 firebase_service_1 = firebase_service_1_1;
-            },
-            function (shortText_pipe_1_1) {
-                shortText_pipe_1 = shortText_pipe_1_1;
             }],
         execute: function() {
-            CardsComponent = (function () {
-                function CardsComponent(_firebaseService) {
+            Admin = (function () {
+                function Admin(_firebaseService) {
                     this._firebaseService = _firebaseService;
+                    this.card = {
+                        header: '',
+                        // date: Date,
+                        images: [
+                            "app/images/angular.jpg"
+                        ],
+                        link: '',
+                        text: '',
+                        author: '',
+                        category: [
+                            "JavaScript",
+                            "Framework",
+                            "MVC"
+                        ],
+                        tags: ['HTML', 'JS']
+                    };
                 }
                 ;
-                CardsComponent.prototype.ngOnInit = function () {
+                Admin.prototype.ngOnInit = function () {
                     this.firebaseRef = this._firebaseService.getFirebaseRef();
-                    this.getCard();
                 };
-                CardsComponent.prototype.getCard = function () {
-                    var self = this; // här blir this appen
-                    this.firebaseRef.once("value", function (snapshot) {
-                        self.articles = snapshot.val().cards;
-                        var articleObject = self.articles;
-                        console.log(articleObject);
-                        for (var item in articleObject) {
-                        }
-                    });
+                Admin.prototype.createCard = function () {
+                    // console.log(this.firebaseRef);
+                    this.firebaseRef.child("cards").push(this.card);
                 };
-                CardsComponent = __decorate([
+                Admin = __decorate([
                     core_1.Component({
-                        selector: 'card',
-                        templateUrl: "./app/templates/cards.html",
-                        pipes: [shortText_pipe_1.ShortText],
+                        selector: 'admin',
+                        templateUrl: './app/templates/admin.html',
                         providers: [firebase_service_1.FirebaseService]
                     }), 
                     __metadata('design:paramtypes', [firebase_service_1.FirebaseService])
-                ], CardsComponent);
-                return CardsComponent;
+                ], Admin);
+                return Admin;
             })();
-            exports_1("CardsComponent", CardsComponent);
+            exports_1("Admin", Admin);
         }
     }
 });
-//# sourceMappingURL=cards.component.js.map
+//# sourceMappingURL=admin.component.js.map

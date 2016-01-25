@@ -1,41 +1,38 @@
-import {Component} from 'angular2/core';
+import {Component, OnInit} from 'angular2/core';
+import {FirebaseService} from '../firebase/firebase.service';
 import {ShortText} from '../pipes/shortText.pipe';
 
 @Component({
   selector: 'card',
-  template: `
-      <div class="card col-md-3" *ngIf=data.card.article>
-        <img src="{{data.card.images}}">
-        <h3>{{data.card.header}}</h3>
-        <p class="hide">Date: {{data.card.date}}</p>
-        <p><i>{{data.card.text | shortText}}</i></p>
-        <p class="hide">Author: {{data.card.author}} </p>
-        <footer>
-          <h4 class="category {{data.card.category[0]}}">{{data.card.category[0]}}</h4>
-          <strong class="hide">Category: {{data.card.category}}</strong>
-          <button class="read-btn">Read more</button>
-        </footer>
-        <a href="{{data.card.link}}" class="hide">Read this Article</a>
-      </div>
+  templateUrl: "./app/templates/cards.html",
+  pipes: [ShortText],
+  providers: [FirebaseService]
 
-      <div class="card col-md-3"*ngIf=data.card.tutorial>
-        <img src="{{data.card.images}}">
-        <h3>{{data.card.header}}</h3>
-        <p class="hide">Date: {{data.card.date}}</p>
-        <p><i>{{data.card.text | shortText}}</i></p>
-        <p class="hide">Author: {{data.card.author}} </p>
-        <footer>
-          <h4 class="category {{data.card.category[0]}}">{{data.card.category[0]}}</h4>
-          <strong class="hide">Category: {{data.card.category}}</strong>
-          <button class="read-btn">Read more</button>
-        </footer>
-        <a href="{{data.card.link}}" class="hide">Read this Article</a>
-      </div>
-    `,
-    inputs: ['data'],
-    pipes: [ShortText]
 })
 
 export class CardsComponent {
+  public firebaseRef;
+  public articles;
+
+  constructor(private _firebaseService: FirebaseService) { }; // create a private static link to ProductService not a normal new ProductService();
+
+  ngOnInit() {
+    this.firebaseRef = this._firebaseService.getFirebaseRef();
+    this.getCard();
+  }
+
+  getCard(){
+    var self = this; // här blir this appen
+    this.firebaseRef.once("value", function(snapshot) {
+      self.articles = snapshot.val().cards;
+      var articleObject = self.articles;
+        console.log(articleObject);
+        for(var item in articleObject){
+          // console.log(item.val());
+        }
+    })
+  }
+
+
 
 }
