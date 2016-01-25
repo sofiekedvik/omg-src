@@ -5,7 +5,6 @@ import {CardsComponent} from '../cards/cards.component';
 
 @Component({
   selector: 'header',
-  // styleUrls: ['app/css/style.css'],
   template: `
     <div class="row">
       <div class="col-md-4">
