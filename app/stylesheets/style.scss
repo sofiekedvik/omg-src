@@ -8,7 +8,20 @@
   box-sizing: border-box;
 }
 
-body {              
+h1, h2, h3, h4 {
+	color: #3f3b3c;
+	margin-bottom: 15px;
+}
+
+h2 {
+	font-size: 2.75em;
+}
+
+p {
+	margin: 0 0 15px;
+}
+
+body {
   font-family: 'Dosis', sans-serif;
 }
 
@@ -70,7 +83,7 @@ header {
 
 .search {
   padding:25px;
-  
+
   #search-btn {
     background: none;
     float:right;
@@ -91,7 +104,7 @@ header {
     padding-left:10px;
   }
 
-  
+
 }
 
 
@@ -254,6 +267,24 @@ div[class*=' number'],div[class^='number'] {
   color: grey;
   font-size: 22px;
   font-weight: 300;
+}
+
+.aboutPage {
+	background-color: #3f3b3c;
+	padding: 1em 0em;
+
+	h2 {
+		font-size: 2.25em;
+		color: white;
+	}
+
+	h4 {
+		color: white;
+	}
+
+	p {
+		color: white;
+	}
 }
 
 @import 'components/admin';

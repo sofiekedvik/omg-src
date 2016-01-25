@@ -6,6 +6,16 @@
   -mos-box-sizing: border-box;
   box-sizing: border-box; }
 
+h1, h2, h3, h4 {
+  color: #3f3b3c;
+  margin-bottom: 15px; }
+
+h2 {
+  font-size: 2.75em; }
+
+p {
+  margin: 0 0 15px; }
+
 body {
   font-family: 'Dosis', sans-serif; }
 
@@ -198,6 +208,17 @@ div[class*=' number'], div[class^='number'] {
   color: grey;
   font-size: 22px;
   font-weight: 300; }
+
+.aboutPage {
+  background-color: #3f3b3c;
+  padding: 1em 0em; }
+  .aboutPage h2 {
+    font-size: 2.25em;
+    color: white; }
+  .aboutPage h4 {
+    color: white; }
+  .aboutPage p {
+    color: white; }
 
 .admin {
   position: fixed;
