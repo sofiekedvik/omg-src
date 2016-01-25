@@ -13,6 +13,18 @@ body {
   font-family: 'Dosis', sans-serif;
 }
 
+h1, h2, h3, h4 {
+	color: #3F3B3C;
+}
+
+h4 {
+	font-size: 1.5em;
+}
+
+p {
+	margin: 0 0 15px 0;
+}
+
 header {
   width:100%;
   position: fixed;
@@ -47,6 +59,10 @@ header {
 
 .hidden {
 	visibility: hidden;
+}
+
+.visible {
+	visibility: visible;
 }
 
 .show {
@@ -233,4 +249,23 @@ div[class*=' number'],div[class^='number'] {
 .blur {
   filter: blur(20px);
 }
-/*@import 'components/admin';*/
+
+.aboutPage {
+	margin: 0 auto;
+	background: #3F3B3C;
+	h1 {
+		color: #6CD3F4;
+		margin: 0em 0em 1em 0em;
+	}
+	h4 {
+		color: white;
+	}
+	p {
+		color: white;
+		font-size: 1.25em;
+	}
+	p em {
+		color: #6CD3F4;
+	}
+}
+@import 'components/admin';

@@ -9,6 +9,15 @@
 body {
   font-family: 'Dosis', sans-serif; }
 
+h1, h2, h3, h4 {
+  color: #3F3B3C; }
+
+h4 {
+  font-size: 1.5em; }
+
+p {
+  margin: 0 0 15px 0; }
+
 header {
   width: 100%;
   position: fixed;
@@ -34,6 +43,12 @@ header {
 
 .hide {
   display: none; }
+
+.hidden {
+  visibility: hidden; }
+
+.visible {
+  visibility: visible; }
 
 .show {
   display: inline; }
@@ -184,4 +199,46 @@ div[class*=' number'], div[class^='number'] {
 .blur {
   filter: blur(20px); }
 
-/*@import 'components/admin';*/
+.aboutPage {
+  margin: 0 auto;
+  background: #3F3B3C; }
+  .aboutPage h1 {
+    color: #6CD3F4;
+    margin: 0em 0em 1em 0em; }
+  .aboutPage h4 {
+    color: white; }
+  .aboutPage p {
+    color: white;
+    font-size: 1.25em; }
+  .aboutPage p em {
+    color: #6CD3F4; }
+
+.admin {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  min-height: 100%;
+  z-index: 1000;
+  background: #E0E0E0;
+  color: white;
+  overflow-y: scroll;
+  opacity: 0;
+  -webkit-transition: opacity 0.32666s cubic-bezier(0, 0, 0.21, 1);
+  -moz-transition: opacity 0.32666s cubic-bezier(0, 0, 0.21, 1);
+  -o-transition: opacity 0.32666s cubic-bezier(0, 0, 0.21, 1);
+  transition: opacity 0.32666s; }
+
+.show {
+  opacity: 1; }
+
+.admin-wrapper {
+  margin: 10vw; }
+
+.category-checkbox {
+  border: 2px solid white;
+  z-index: 200; }
+
+.admin-checkbox input[type="checkbox"] {
+  position: relative; }

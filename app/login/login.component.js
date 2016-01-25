@@ -10,7 +10,7 @@ System.register(['angular2/core'], function(exports_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var template, Login, firebase;
+    var template, Login;
     return {
         setters:[
             function (core_1_1) {
@@ -35,7 +35,6 @@ System.register(['angular2/core'], function(exports_1) {
                 return Login;
             })();
             exports_1("Login", Login);
-            firebase = new Firebase("https://omgsrc.firebaseio.com");
         }
     }
 });

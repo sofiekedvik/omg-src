@@ -3,16 +3,16 @@ var gulp = require('gulp'),
 
 
 gulp.task('sass', function(){
-  gulp.src(['app/css/**/*.scss'])
+  gulp.src(['app/stylesheets/**/*.scss'])
   .pipe(sass().on('error', sass.logError))
-  .pipe(gulp.dest('app/css'));
+  .pipe(gulp.dest('app/stylesheets'));
 });
 
 
 gulp.task('bootstrap-sass', function(){
   gulp.src(['bower_components/bootstrap-sass/assets/stylesheets/bootstrap.scss'])
   .pipe(sass().on('error', sass.logError))
-  .pipe(gulp.dest('app/css'));
+  .pipe(gulp.dest('app/stylesheets'));
 });
 
 gulp.task('bootstrap-js', function(){
@@ -31,7 +31,7 @@ gulp.task('fonts', function(){
 });
 
 gulp.task('sass:watch', function() {
-  gulp.watch('app/css/style.scss', ['sass']);
+  gulp.watch('app/stylesheets/style.scss', ['sass']);
 });
 
 gulp.task('default', ['sass', 'bootstrap-sass','bootstrap-js','jquery','fonts']);

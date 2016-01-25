@@ -9,30 +9,28 @@ System.register(['angular2/core'], function(exports_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var AboutPageComponent;
+    var FirebaseService;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            AboutPageComponent = (function () {
-                function AboutPageComponent() {
+            FirebaseService = (function () {
+                function FirebaseService() {
+                    this.firebaseRef = new Firebase("https://omgsrc.firebaseio.com/");
                 }
-                AboutPageComponent.prototype.about = function () {
+                FirebaseService.prototype.getFirebaseRef = function () {
+                    return this.firebaseRef;
                 };
-                AboutPageComponent = __decorate([
-                    core_1.Component({
-                        selector: 'about-page',
-                        templateUrl: './app/templates/aboutPage.html'
-                    }), 
+                FirebaseService = __decorate([
+                    core_1.Injectable(), 
                     __metadata('design:paramtypes', [])
-                ], AboutPageComponent);
-                return AboutPageComponent;
+                ], FirebaseService);
+                return FirebaseService;
             })();
-            exports_1("AboutPageComponent", AboutPageComponent);
+            exports_1("FirebaseService", FirebaseService);
         }
     }
 });
-//AboutPageComponent.about();
-//# sourceMappingURL=aboutPage.component.js.map
+//# sourceMappingURL=firebase.service.js.map

@@ -27,22 +27,20 @@ System.register(['angular2/core'], function(exports_1) {
                 MenuComponent.prototype.about = function () {
                     console.log("click");
                     //show and hide about
-                    if ($("#about-page").hasClass("hidden")) {
-                        $('html, body').animate({
-                            scrollTop: $("#about-page").offset().top
-                        }, 2000);
-                        $("#about-page").removeClass("hidden");
-                        $("#about-page").addClass("show");
+                    if ($("#open").hasClass("hidden")) {
+                        console.log("has hidden");
+                        $("#open").removeClass("hidden");
+                        $("#open").addClass("visible");
                     }
-                    else if ($("#about-page").hasClass("show")) {
-                        $("#about-page").removeClass("show");
-                        $("#about-page").addClass("hidden");
+                    else if ($("#open").hasClass("visible")) {
+                        $("#open").removeClass("visible");
+                        $("#open").addClass("hidden");
                     }
                 };
                 MenuComponent = __decorate([
                     core_1.Component({
                         selector: 'header',
-                        styleUrls: ['app/css/style.css'],
+                        // styleUrls: ['app/css/style.css'],
                         template: "\n    <div class=\"row\">\n      <div class=\"col-md-4\">\n        <input type='checkbox' id='toggle'>\n            <label for='toggle' onclick class='menu-holder'>\n\n                <div class='line'></div>\n                <div class='line'></div>\n                <div class='line'></div>\n\n            </label>\n        <nav class=\"menu main\">\n          <ul>\n            <li><h3>Category</h3></li>\n            <li (click)=\"setCat(1)\"><a>CSS</a></li>\n            <li (click)=\"setCat(2)\"><a>HTML</a></li>\n            <li (click)=\"setCat(3)\"><a>JavaScript</a></li>\n            <li (click)=\"setCat(4)\"><a>PHP</a></li>\n            <li (click)=\"setCat(5)\"><a>Design</a></li>\n\n            <li><h3>Omg Src</h3></li>\n            <li id=\"about-link\" (click)=\"about()\"><a href=\"#about-page\">About</a></li>\n            <li><a href=\"#\">What is Frontend?</a></li>\n            <li><a href=\"#\">FaQ</a></li>\n          </ul>\n        </nav>\n      </div>\n      <div class=\"col-md-4 logo\">\n        <h1><a href=\"index.html\">Omg=<span>Src!</span></a></h1>\n        <p>The modern front end wiki</p>\n      </div>\n      <div class=\"col-md-4\">\n        <button class=\"search\"><span class=\"glyphicon glyphicon-search\" aria-hidden=\"true\"></span></button>\n      </div>\n\n    </div>\n    ",
                         inputs: ['data']
                     }), 

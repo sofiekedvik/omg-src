@@ -1,11 +1,11 @@
 import {Component} from 'angular2/core';
-import {FetchJsonPipe} from './fetch-json.pipe';
-import {CardsComponent} from './cards.component';
+import {FetchJsonPipe} from '../pipes/fetch-json.pipe';
+import {CardsComponent} from '../cards/cards.component';
 
 
 @Component({
   selector: 'header',
-  styleUrls: ['app/css/style.css'],
+  // styleUrls: ['app/css/style.css'],
   template: `
     <div class="row">
       <div class="col-md-4">
@@ -57,19 +57,16 @@ export class MenuComponent {
 
   about(){
     console.log("click");
-
     //show and hide about
-    if($("#about-page").hasClass("hidden")){
-      $('html, body').animate({
-        scrollTop: $("#about-page").offset().top
-      }, 2000);
+    if($("#open").hasClass("hidden")){
+      console.log("has hidden");
 
-      $("#about-page").removeClass("hidden");
-      $("#about-page").addClass("show");
+      $("#open").removeClass("hidden");
+      $("#open").addClass("visible");
     }
-    else if($("#about-page").hasClass("show")) {
-      $("#about-page").removeClass("show");
-      $("#about-page").addClass("hidden");
+    else if($("#open").hasClass("visible")) {
+      $("#open").removeClass("visible");
+      $("#open").addClass("hidden");
     }
   }
 
