@@ -26,7 +26,7 @@ import {CardsComponent} from '../cards/cards.component';
             <li (click)="setCat(5)"><a href="#">Design</a></li>
 
             <li><h3>Omg Src</h3></li>
-            <li><a href="#">About</a></li>
+            <li id="about-link" (click)="about()"><a>About</a></li>
             <li><a href="#">What is Frontend?</a></li>
             <li><a href="#">FaQ</a></li>
           </ul>
@@ -57,6 +57,20 @@ export class MenuComponent {
 
   toggleInput(){
     document.getElementById("searchField").classList.toggle('hide');
+  }
+
+  about(){
+    //show and hide about
+    if($("#open").hasClass("hidden")){
+      $("#open").removeClass("hidden");
+      console.log("hej hej");
+      $("#open").addClass("visible");
+
+    }
+    else if($("#open").hasClass("visible")) {
+      $("#open").removeClass("visible");
+      $("#open").addClass("hidden");
+    }
   }
 
 

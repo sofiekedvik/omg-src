@@ -27,10 +27,22 @@ System.register(['angular2/core'], function(exports_1) {
                 MenuComponent.prototype.toggleInput = function () {
                     document.getElementById("searchField").classList.toggle('hide');
                 };
+                MenuComponent.prototype.about = function () {
+                    //show and hide about
+                    if ($("#open").hasClass("hidden")) {
+                        $("#open").removeClass("hidden");
+                        console.log("hej hej");
+                        $("#open").addClass("visible");
+                    }
+                    else if ($("#open").hasClass("visible")) {
+                        $("#open").removeClass("visible");
+                        $("#open").addClass("hidden");
+                    }
+                };
                 MenuComponent = __decorate([
                     core_1.Component({
                         selector: 'header',
-                        template: "\n    <div class=\"row\">\n      <div class=\"col-md-4\">\n        <input type='checkbox' id='toggle'>\n            <label for='toggle' onclick class='menu-holder'>\n\n                <div class='line'></div>\n                <div class='line'></div>\n                <div class='line'></div>\n\n            </label>\n        <nav class=\"menu main\">\n          <ul>\n            <li><h3>Category</h3></li>\n            <li (click)=\"setCat(1)\"><a>CSS</a></li>\n            <li (click)=\"setCat(2)\"><a>HTML</a></li>\n            <li (click)=\"setCat(3)\"><a href=\"#\">JavaScript</a></li>\n            <li (click)=\"setCat(4)\"><a href=\"#\">PHP</a></li>\n            <li (click)=\"setCat(5)\"><a href=\"#\">Design</a></li>\n\n            <li><h3>Omg Src</h3></li>\n            <li><a href=\"#\">About</a></li>\n            <li><a href=\"#\">What is Frontend?</a></li>\n            <li><a href=\"#\">FaQ</a></li>\n          </ul>\n        </nav>\n      </div>\n      <div class=\"col-md-4 logo\">\n        <h1><a href=\"index.html\">Omg=<span>Src!</span></a></h1>\n        <p>The modern front end wiki</p>\n      </div>\n      <div class=\"search col-md-4\">\n        <button id=\"search-btn\" (click)=\"toggleInput()\"><span class=\"glyphicon glyphicon-search\" aria-hidden=\"true\"></span></button>\n        <input id=\"searchField\" class=\"hide\" type=\"text\" placeholder=\"Search...\">\n      </div>\n\n    </div>\n    ",
+                        template: "\n    <div class=\"row\">\n      <div class=\"col-md-4\">\n        <input type='checkbox' id='toggle'>\n            <label for='toggle' onclick class='menu-holder'>\n\n                <div class='line'></div>\n                <div class='line'></div>\n                <div class='line'></div>\n\n            </label>\n        <nav class=\"menu main\">\n          <ul>\n            <li><h3>Category</h3></li>\n            <li (click)=\"setCat(1)\"><a>CSS</a></li>\n            <li (click)=\"setCat(2)\"><a>HTML</a></li>\n            <li (click)=\"setCat(3)\"><a href=\"#\">JavaScript</a></li>\n            <li (click)=\"setCat(4)\"><a href=\"#\">PHP</a></li>\n            <li (click)=\"setCat(5)\"><a href=\"#\">Design</a></li>\n\n            <li><h3>Omg Src</h3></li>\n            <li id=\"about-link\" (click)=\"about()\"><a>About</a></li>\n            <li><a href=\"#\">What is Frontend?</a></li>\n            <li><a href=\"#\">FaQ</a></li>\n          </ul>\n        </nav>\n      </div>\n      <div class=\"col-md-4 logo\">\n        <h1><a href=\"index.html\">Omg=<span>Src!</span></a></h1>\n        <p>The modern front end wiki</p>\n      </div>\n      <div class=\"search col-md-4\">\n        <button id=\"search-btn\" (click)=\"toggleInput()\"><span class=\"glyphicon glyphicon-search\" aria-hidden=\"true\"></span></button>\n        <input id=\"searchField\" class=\"hide\" type=\"text\" placeholder=\"Search...\">\n      </div>\n\n    </div>\n    ",
                         inputs: ['data']
                     }), 
                     __metadata('design:paramtypes', [])
