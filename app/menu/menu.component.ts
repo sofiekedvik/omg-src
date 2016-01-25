@@ -27,7 +27,7 @@ import {CardsComponent} from '../cards/cards.component';
             <li (click)="setCat(5)"><a>Design</a></li>
 
             <li><h3>Omg Src</h3></li>
-            <li id="about-link" (click)="about()"><a href="#about-page">About</a></li>
+            <li id="about-link" (click)="about()"><a>About</a></li>
             <li><a href="#">What is Frontend?</a></li>
             <li><a href="#">FaQ</a></li>
           </ul>
