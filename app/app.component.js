@@ -42,10 +42,6 @@ System.register(['angular2/core', './about_page/aboutPage.component', './cards/c
         execute: function() {
             AppComponent = (function () {
                 function AppComponent() {
-                    this.data = {
-                        cat: 1,
-                        page: 1
-                    };
                 }
                 AppComponent = __decorate([
                     core_1.Component({
