@@ -57,7 +57,7 @@ export class MenuComponent {
 
   toggleInput(){
     document.getElementById("searchField").classList.toggle('hide');
-        }
+  }
 
 
 }

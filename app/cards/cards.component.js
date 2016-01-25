@@ -25,6 +25,7 @@ System.register(['angular2/core', '../firebase/firebase.service', '../pipes/shor
             CardsComponent = (function () {
                 function CardsComponent(_firebaseService) {
                     this._firebaseService = _firebaseService;
+                    this.articles = [];
                 }
                 ;
                 CardsComponent.prototype.ngOnInit = function () {
@@ -33,12 +34,14 @@ System.register(['angular2/core', '../firebase/firebase.service', '../pipes/shor
                 };
                 CardsComponent.prototype.getCard = function () {
                     var self = this; // här blir this appen
-                    this.firebaseRef.once("value", function (snapshot) {
-                        self.articles = snapshot.val().cards;
-                        var articleObject = self.articles;
-                        console.log(articleObject);
-                        for (var item in articleObject) {
-                        }
+                    // this.firebaseRef.child('cards').once("child_added", function(snapshot) {
+                    //   self.articles.push(snapshot.val());
+                    //   console.log("once");
+                    // })
+                    this.firebaseRef.child('cards').on("child_added", function (snapshot) {
+                        self.articles.push(snapshot.val());
+                        console.log(snapshot.val());
+                        console.log("change");
                     });
                 };
                 CardsComponent = __decorate([

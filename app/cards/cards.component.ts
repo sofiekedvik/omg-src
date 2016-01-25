@@ -12,7 +12,7 @@ import {ShortText} from '../pipes/shortText.pipe';
 
 export class CardsComponent {
   public firebaseRef;
-  public articles;
+  public articles = [];
 
   constructor(private _firebaseService: FirebaseService) { }; // create a private static link to ProductService not a normal new ProductService();
 
@@ -23,16 +23,25 @@ export class CardsComponent {
 
   getCard(){
     var self = this; // här blir this appen
-    this.firebaseRef.once("value", function(snapshot) {
-      self.articles = snapshot.val().cards;
-      var articleObject = self.articles;
-        console.log(articleObject);
-        for(var item in articleObject){
-          // console.log(item.val());
-        }
+    // this.firebaseRef.child('cards').once("child_added", function(snapshot) {
+      
+    //   self.articles.push(snapshot.val());
+
+    
+    //   console.log("once");
+     
+    // })
+
+    this.firebaseRef.child('cards').on("child_added", function(snapshot) {
+      self.articles.push(snapshot.val());
+      console.log(snapshot.val())
+      console.log("change");
+
     })
-  }
+
+   }
+ }
 
 
 
-}
+

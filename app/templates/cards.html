@@ -1,6 +1,18 @@
-<!-- 
 
-<div *ngFor="#pop of articles">
-  <h3>{{pop.link}}</h3>
+<div *ngFor="#card of articles">
+	<div class="card col-md-3">
+		<img src="{{card.images}}" alt="">
+  		<h3>{{card.header}}</h3>
+  		<!-- <p class="hide">Date: {{card.date}}</p> -->
+        <p><i>{{card.text | shortText}}</i></p>
+        <p class="hide">Author: {{card.author}} </p>
+        <footer>
+          <h4 class="category {{card.category[0]}}">{{card.category[0]}}</h4>
+          <strong class="hide">Category: {{card.category}}</strong>
+          <button class="read-btn">Read more</button>
+        </footer>
+        <a href="{{card.link}}" class="hide">Read this Article</a>
+		
+	</div>
 </div>
-     -->
+ 
