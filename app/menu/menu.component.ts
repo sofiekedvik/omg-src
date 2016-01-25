@@ -60,7 +60,6 @@ export class MenuComponent {
     //show and hide about
     if($("#open").hasClass("hidden")){
       console.log("has hidden");
-
       $("#open").removeClass("hidden");
       $("#open").addClass("visible");
     }
